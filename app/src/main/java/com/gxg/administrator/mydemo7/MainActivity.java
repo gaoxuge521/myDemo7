@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     @Bind(R.id.rv_head)
     TextView mRv;
 
+    //修改
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
