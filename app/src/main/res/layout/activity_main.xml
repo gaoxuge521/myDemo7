@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.gxg.administrator.mydemo7.MainActivity">
+
+    <TextView
+        android:gravity="center"
+        android:textSize="14sp"
+        android:id="@+id/rv_pbl"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="瀑布流"/>
+    <TextView
+        android:gravity="center_horizontal"
+        android:textSize="14sp"
+        android:id="@+id/rv_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="瀑布流头部"/>
+</LinearLayout>
