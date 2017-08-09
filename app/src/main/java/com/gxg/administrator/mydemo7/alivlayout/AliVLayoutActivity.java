@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.ajguan.library.EasyRefreshLayout;
 import com.alibaba.android.vlayout.DelegateAdapter;
 import com.alibaba.android.vlayout.VirtualLayoutManager;
+import com.alibaba.android.vlayout.layout.ScrollFixLayoutHelper;
 import com.alibaba.android.vlayout.layout.SingleLayoutHelper;
 import com.alibaba.android.vlayout.layout.StaggeredGridLayoutHelper;
 import com.alibaba.android.vlayout.layout.StickyLayoutHelper;
@@ -75,7 +76,7 @@ public class AliVLayoutActivity extends AppCompatActivity {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
-//                mLayoutManager.invalidateSpanAssignments(); //防止第一行到顶部有空白区域
+                //会重新计算布局
                 VirtualLayoutManager manager = (VirtualLayoutManager) recyclerView.getLayoutManager();
                 int firstVisibleItemPosition = manager.findFirstVisibleItemPosition();
                 if(firstVisibleItemPosition==0){
@@ -141,12 +142,24 @@ public class AliVLayoutActivity extends AppCompatActivity {
         };
         adapters.add(mSingleLayoutAdapter);
 
+        //设置滚动固定布局
+        ScrollFixLayoutHelper scrollFixLayoutHelper = new ScrollFixLayoutHelper(ScrollFixLayoutHelper.BOTTOM_RIGHT,0,0);
+        scrollFixLayoutHelper.setShowType(ScrollFixLayoutHelper.SHOW_ON_LEAVE);
+        ScrollFixAdapter scrollFixAdapter = new ScrollFixAdapter(scrollFixLayoutHelper,this);
+        scrollFixAdapter.setOnBackCliklistener(new ScrollFixAdapter.OnBackCliklistener() {
+            @Override
+            public void OnClick() {
+//                showToast("返回顶部");
+                mRvAli.smoothScrollToPosition(0);
 
+            }
+        });
+        adapters.add(scrollFixAdapter);
 
-        //添加 //设置滚动固定布局
-        StickyLayoutHelper scrollFixLayoutHelper = new StickyLayoutHelper();
-        scrollFixLayoutHelper.setStickyStart(true);
-        ScrollFixLayoutAdapter scrollFixLayoutAdapter = new ScrollFixLayoutAdapter(scrollFixLayoutHelper,this){
+        //添加Sticky布局
+        StickyLayoutHelper stickyLayoutHelper = new StickyLayoutHelper();
+        stickyLayoutHelper.setStickyStart(true);
+        ScrollFixLayoutAdapter scrollFixLayoutAdapter = new ScrollFixLayoutAdapter(stickyLayoutHelper,this){
             @Override
             public void onBindViewHolder(ScrollViewHolder holder, int position) {
                 super.onBindViewHolder(holder, position);
@@ -201,6 +214,10 @@ public class AliVLayoutActivity extends AppCompatActivity {
         return list;
     }
 
+
+    public void showToast(String str){
+        Toast.makeText(this,str,Toast.LENGTH_LONG).show();
+    }
     private void initData() {
         DisplayMetrics displayMetrics = new DisplayMetrics();
         AliVLayoutActivity.this.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
