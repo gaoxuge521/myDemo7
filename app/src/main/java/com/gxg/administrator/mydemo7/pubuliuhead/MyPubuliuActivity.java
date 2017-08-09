@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.gxg.administrator.mydemo7.R;
+import com.gxg.administrator.mydemo7.pubuliu.SpacesItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +34,7 @@ public class MyPubuliuActivity extends AppCompatActivity implements BaseRecycleV
     @Bind(R.id.activity_my_pubuliu)
     RelativeLayout mActivityMyPubuliu;
 
-    private MyStaggeredGridLayoutManager staggeredGridLayoutManager;
+    private StaggeredGridLayoutManager staggeredGridLayoutManager;
     private MyPubuAdapter mAdapter;
     private Toast toast;
 
@@ -51,8 +52,11 @@ public class MyPubuliuActivity extends AppCompatActivity implements BaseRecycleV
     }
 
     private void initData() {
-        mAdapter = new MyPubuAdapter(this);
-        mAdapter.setData(getData());
+        mBaseList.setPadding(8,8,8,8);
+        SpacesItemDecoration decoration = new SpacesItemDecoration(8);
+        mBaseList.addItemDecoration(decoration);
+        mAdapter = new MyPubuAdapter(this,new ArrayList<String>());
+
         mAdapter.setListener(new BaseRecycleView.OnItemTouchListener() {
             @Override
             public void onClickListener(int position) {
@@ -65,7 +69,7 @@ public class MyPubuliuActivity extends AppCompatActivity implements BaseRecycleV
             }
         });
 
-        staggeredGridLayoutManager = new MyStaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+        staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         mBaseList.setLayoutManager(staggeredGridLayoutManager);
         mBaseList.setLoadMoreListener(this);
 
@@ -116,6 +120,10 @@ public class MyPubuliuActivity extends AppCompatActivity implements BaseRecycleV
                     }
                 }
         );
+
+
+        mAdapter.setData(getData());
+        mAdapter.notifyDataSetChanged();
     }
 
     private void showToast(String s) {

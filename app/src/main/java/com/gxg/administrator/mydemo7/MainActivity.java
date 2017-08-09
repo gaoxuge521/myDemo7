@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import com.gxg.administrator.mydemo7.alivlayout.AliVLayoutActivity;
 import com.gxg.administrator.mydemo7.pubuliu.RecycleViewDemo;
 import com.gxg.administrator.mydemo7.pubuliuhead.MyPubuliuActivity;
 
@@ -29,11 +30,14 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.rv_pbl, R.id.rv_head})
+    @OnClick({R.id.rv_pbl, R.id.rv_head,R.id.rv_ali})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.rv_pbl:
                 startActivity(new Intent(MainActivity.this,RecycleViewDemo.class));
+                break;
+            case R.id.rv_ali:
+                startActivity(new Intent(MainActivity.this,AliVLayoutActivity.class));
                 break;
             case R.id.rv_head:
                 startActivity(new Intent(MainActivity.this,MyPubuliuActivity.class));

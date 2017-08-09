@@ -21,6 +21,8 @@
         </activity>
         <activity android:name=".pubuliuhead.MyPubuliuActivity">
         </activity>
+        <activity android:name=".alivlayout.AliVLayoutActivity">
+        </activity>
     </application>
 
 </manifest>

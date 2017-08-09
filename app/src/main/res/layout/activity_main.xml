@@ -18,10 +18,17 @@
         android:layout_height="50dp"
         android:text="瀑布流"/>
     <TextView
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:textSize="14sp"
         android:id="@+id/rv_head"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:text="瀑布流头部"/>
+    <TextView
+        android:gravity="center"
+        android:textSize="14sp"
+        android:id="@+id/rv_ali"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="阿里的Vlayout"/>
 </LinearLayout>
