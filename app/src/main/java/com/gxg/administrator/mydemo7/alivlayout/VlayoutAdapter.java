@@ -32,6 +32,21 @@ public class VlayoutAdapter extends DelegateAdapter.Adapter<VlayoutAdapter.Vlayo
         this.mHelper = helper;
     }
 
+    public List<ImgBean> getList() {
+        return mList;
+    }
+
+
+    public void setNewData(List<ImgBean> list){
+        this.mList = list;
+        notifyDataSetChanged();
+
+    }
+    public void addAll(List<ImgBean> list){
+        this.mList.addAll(list);
+        notifyDataSetChanged();
+
+    };
     @Override
     public LayoutHelper onCreateLayoutHelper() {
         return mHelper;

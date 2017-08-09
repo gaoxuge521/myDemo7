@@ -7,10 +7,17 @@
     android:layout_height="match_parent"
     tools:context="com.gxg.administrator.mydemo7.alivlayout.AliVLayoutActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_ali"
+    <com.ajguan.library.EasyRefreshLayout
+        android:id="@+id/erl_easy"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:background="@color/back"
+            android:id="@+id/rv_ali"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    </android.support.v7.widget.RecyclerView>
+        </android.support.v7.widget.RecyclerView>
+    </com.ajguan.library.EasyRefreshLayout>
+
 </RelativeLayout>

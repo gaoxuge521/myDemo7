@@ -8,4 +8,5 @@
     <color name="assistant_item_text">#040404</color>
     <color name="line_color">#EFEFF4</color>
     <color name="black">#ff000000</color>
+    <color name="back">#e2e2e2</color>
 </resources>
