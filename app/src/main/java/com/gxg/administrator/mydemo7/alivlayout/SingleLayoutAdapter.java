@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.alibaba.android.vlayout.DelegateAdapter;
 import com.alibaba.android.vlayout.LayoutHelper;
 import com.gxg.administrator.mydemo7.R;
+import com.gxg.administrator.mydemo7.pubuliu.ImgBean;
 
 /**
  * Created by lvliheng on 2017/8/9 at 9:45.
@@ -21,14 +22,26 @@ public class SingleLayoutAdapter extends DelegateAdapter.Adapter<SingleLayoutAda
     private LayoutHelper mHelper;
     private Context mContext;
     private SingleLayoutViewHolder mHolder;
+    private ImgBean mImgBean;
+    private OnGuanzhuClick mGuanzhuClick;
+
+    public void setGuanzhuClick(OnGuanzhuClick guanzhuClick) {
+        mGuanzhuClick = guanzhuClick;
+    }
 
     public SingleLayoutViewHolder getHolder() {
         return mHolder;
     }
 
-    public SingleLayoutAdapter(LayoutHelper helper, Context context) {
-        mHelper = helper;
-        mContext = context;
+    public SingleLayoutAdapter(LayoutHelper helper, Context context,ImgBean imgBean) {
+        this.mHelper = helper;
+        this.mImgBean = imgBean;
+       this. mContext = context;
+    }
+
+    public void setData(ImgBean imgBean){
+        this.mImgBean = imgBean;
+        notifyDataSetChanged();
     }
 
     @Override
@@ -44,7 +57,16 @@ public class SingleLayoutAdapter extends DelegateAdapter.Adapter<SingleLayoutAda
 
     @Override
     public void onBindViewHolder(SingleLayoutViewHolder holder, int position) {
-
+        holder.tv_name.setText(mImgBean.getName());
+        holder.img_head.setImageResource(mImgBean.getImg());
+        holder.guanzhu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(mGuanzhuClick!=null){
+                    mGuanzhuClick.guanzhu();
+                }
+            }
+        });
     }
 
 
@@ -56,21 +78,20 @@ public class SingleLayoutAdapter extends DelegateAdapter.Adapter<SingleLayoutAda
     public class SingleLayoutViewHolder extends RecyclerView.ViewHolder{
 
         private ImageView img_head;
-        private TextView tv_name;
+        private TextView tv_name,guanzhu;
 
-        public ImageView getImg_head() {
-            return img_head;
-        }
 
-        public TextView getTv_name() {
-            return tv_name;
-        }
 
         public SingleLayoutViewHolder(View itemView) {
             super(itemView);
             img_head = (ImageView) itemView.findViewById(R.id.ali_img_head);
             tv_name = (TextView) itemView.findViewById(R.id.ali_name_head);
+            guanzhu = (TextView) itemView.findViewById(R.id.guanzhu);
 
         }
+    }
+
+    public interface OnGuanzhuClick{
+        void guanzhu();
     }
 }

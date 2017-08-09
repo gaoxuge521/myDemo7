@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ajguan.library.EasyRefreshLayout;
+import com.ajguan.library.LoadModel;
 import com.alibaba.android.vlayout.DelegateAdapter;
 import com.alibaba.android.vlayout.VirtualLayoutManager;
 import com.alibaba.android.vlayout.layout.ScrollFixLayoutHelper;
@@ -46,6 +47,9 @@ public class AliVLayoutActivity extends AppCompatActivity {
     private VirtualLayoutManager mLayoutManager;
     private SingleLayoutHelper mSingleLayoutHelper;
     private StaggeredGridLayoutHelper mStaggeredGridLayoutHelper;
+    private ImgBean mImgBean;
+    private ImgBean mBean;
+    private int mCount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,8 +97,14 @@ public class AliVLayoutActivity extends AppCompatActivity {
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
+
+                        if(mCount>=80){
+                            showToast("没有更多数据了。。。");
+                            mErlEasy.loadMoreComplete();
+                            mErlEasy.setLoadMoreModel(LoadModel.NONE);
+                        }
                         mAdapter.addAll(getImgDate());
-                        Toast.makeText(AliVLayoutActivity.this,"加载更多",Toast.LENGTH_LONG).show();
+                        Toast.makeText(AliVLayoutActivity.this,"加载更多",Toast.LENGTH_SHORT).show();
                         mErlEasy.loadMoreComplete();
                     }
                 },1000);
@@ -105,6 +115,8 @@ public class AliVLayoutActivity extends AppCompatActivity {
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
+                        mCount = 0;
+                        mErlEasy.setLoadMoreModel(LoadModel.COMMON_MODEL);
                         mImgBeanList.clear();
                         mAdapter.getList().clear();
                         initData();
@@ -118,6 +130,7 @@ public class AliVLayoutActivity extends AppCompatActivity {
         });
     }
 
+    private boolean flag;
     private void initRecycle() {
         //设置Adapter列表
         List<DelegateAdapter.Adapter> adapters = new LinkedList<>();
@@ -132,14 +145,27 @@ public class AliVLayoutActivity extends AppCompatActivity {
         viewPool.setMaxRecycledViews(1, 20);
 
         mSingleLayoutHelper = new SingleLayoutHelper();
-        mSingleLayoutAdapter = new SingleLayoutAdapter(mSingleLayoutHelper,this){
+        mImgBean = new ImgBean();
+        mImgBean.setImg(R.drawable.yidian_1167278123);
+        mImgBean.setName("首次设置值");
+
+        mBean = new ImgBean();
+        mBean.setImg(R.drawable.yidian_1167278026);
+        mBean.setName("关注设置的值");
+        mSingleLayoutAdapter = new SingleLayoutAdapter(mSingleLayoutHelper,this, mImgBean);
+        mSingleLayoutAdapter.setGuanzhuClick(new SingleLayoutAdapter.OnGuanzhuClick() {
             @Override
-            public void onBindViewHolder(SingleLayoutViewHolder holder, int position) {
-                super.onBindViewHolder(holder, position);
-               holder.getImg_head().setImageResource(R.drawable.yidian_1167278123);
-               holder.getTv_name().setText("修改过的值");
+            public void guanzhu() {
+               if(flag){
+                   mSingleLayoutAdapter.setData(mImgBean);
+                   flag=false;
+               }else{
+                   mSingleLayoutAdapter.setData(mBean);
+                   flag=true;
+               }
+
             }
-        };
+        });
         adapters.add(mSingleLayoutAdapter);
 
         //设置滚动固定布局
@@ -165,6 +191,12 @@ public class AliVLayoutActivity extends AppCompatActivity {
                 super.onBindViewHolder(holder, position);
             }
         };
+        scrollFixLayoutAdapter.setOnItemCliclistener(new ScrollFixLayoutAdapter.OnItemCliclistener() {
+            @Override
+            public void onclick(String name, int position) {
+                showToast(name+"  "+position);
+            }
+        });
         adapters.add(scrollFixLayoutAdapter);
 
 //       tvname  = mSingleLayoutAdapter.getHolder().getTv_name();
@@ -178,6 +210,12 @@ public class AliVLayoutActivity extends AppCompatActivity {
         mStaggeredGridLayoutHelper.setMarginTop(20);
         mStaggeredGridLayoutHelper.setMarginBottom(50);
         mAdapter = new VlayoutAdapter(this, mImgBeanList, mStaggeredGridLayoutHelper);
+        mAdapter.setItemClicklistener(new VlayoutAdapter.OnItemClicklistener() {
+            @Override
+            public void OnItemClick(int position) {
+                showToast(mAdapter.getList().get(position).getName()+" "+position);
+            }
+        });
         adapters.add(mAdapter);
 
 
@@ -202,8 +240,9 @@ public class AliVLayoutActivity extends AppCompatActivity {
         AliVLayoutActivity.this.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int width = displayMetrics.widthPixels;
         int dex = mAdapter.getList().size();
-        int count = dex+10;
-        for (int i = dex; i <count; i++) {
+        mCount = dex+20;
+
+        for (int i = dex; i < mCount; i++) {
             ImgBean imgBean = new ImgBean();
             imgBean.setName("测试" + i);
             imgBean.setImg(R.drawable.yidian_1167278026);
@@ -216,7 +255,7 @@ public class AliVLayoutActivity extends AppCompatActivity {
 
 
     public void showToast(String str){
-        Toast.makeText(this,str,Toast.LENGTH_LONG).show();
+        Toast.makeText(this,str,Toast.LENGTH_SHORT).show();
     }
     private void initData() {
         DisplayMetrics displayMetrics = new DisplayMetrics();

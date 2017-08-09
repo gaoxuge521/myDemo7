@@ -16,14 +16,26 @@
         android:alpha="0.4"
         android:background="@android:color/black"/>
     <TextView
-        android:textSize="20sp"
-        android:textColor="@android:color/white"
         android:id="@+id/ali_name_head"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:gravity="center"
-        android:text="哈哈哈哈或或"/>
+        android:text="哈哈哈哈或或"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/guanzhu"
+        android:padding="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ali_name_head"
+        android:text="关注"/>
 
 
 </RelativeLayout>

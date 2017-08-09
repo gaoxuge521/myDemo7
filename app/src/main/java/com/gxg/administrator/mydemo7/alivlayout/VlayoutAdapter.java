@@ -25,6 +25,11 @@ public class VlayoutAdapter extends DelegateAdapter.Adapter<VlayoutAdapter.Vlayo
     private Context mContext;
     private List<ImgBean> mList;
     private LayoutHelper mHelper;
+    private OnItemClicklistener mItemClicklistener;
+
+    public void setItemClicklistener(OnItemClicklistener itemClicklistener) {
+        mItemClicklistener = itemClicklistener;
+    }
 
     public VlayoutAdapter(Context context, List<ImgBean> list, LayoutHelper helper) {
         this.mContext = context;
@@ -58,7 +63,7 @@ public class VlayoutAdapter extends DelegateAdapter.Adapter<VlayoutAdapter.Vlayo
     }
 
     @Override
-    public void onBindViewHolder(VlayoutViewHolder holder, int position) {
+    public void onBindViewHolder(VlayoutViewHolder holder, final int position) {
         ViewGroup.LayoutParams params = holder.mImageView.getLayoutParams();
         params.height = mList.get(position).getHeight();
         holder.mImageView.setLayoutParams(params);
@@ -66,6 +71,15 @@ public class VlayoutAdapter extends DelegateAdapter.Adapter<VlayoutAdapter.Vlayo
 
         holder.mImageView.setImageResource(mList.get(position).getImg());
         holder.mTextView.setText(mList.get(position).getName());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(mItemClicklistener!=null){
+                    mItemClicklistener.OnItemClick(position);
+                }
+            }
+        });
     }
 
     @Override
@@ -84,5 +98,10 @@ public class VlayoutAdapter extends DelegateAdapter.Adapter<VlayoutAdapter.Vlayo
             mTextView = (TextView) itemView.findViewById(R.id.tv_ceshi);
 
         }
+    }
+
+    public interface OnItemClicklistener{
+        void OnItemClick(int position);
+
     }
 }
