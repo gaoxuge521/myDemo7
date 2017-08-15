@@ -31,4 +31,26 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="阿里的Vlayout"/>
+    <TextView
+        android:gravity="center"
+        android:textSize="14sp"
+        android:id="@+id/rv_fre_head"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="RefreshHeaderLayout"/>
+
+    <TextView
+        android:gravity="center"
+        android:textSize="14sp"
+        android:id="@+id/iv_picture"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="获取相册或者相机的图片"/>
+    <TextView
+        android:gravity="center"
+        android:textSize="14sp"
+        android:id="@+id/iv_zxing"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="生成和扫描二维码"/>
 </LinearLayout>

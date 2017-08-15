@@ -9,4 +9,8 @@
     <color name="line_color">#EFEFF4</color>
     <color name="black">#ff000000</color>
     <color name="back">#e2e2e2</color>
+
+
+    <color name="primary_black">#ff000000</color>
+    <color name="shape_line_light_cyan">#ffe0e0de</color>
 </resources>

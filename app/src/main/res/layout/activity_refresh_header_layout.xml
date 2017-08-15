@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0.0dip">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@id/toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="?actionBarSize"
+            app:layout_scrollFlags="enterAlways|scroll"
+            app:title="">
+            <TextView android:id="@+id/toolbar_title"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:maxLines="1"
+                      android:textColor="@color/primary_black"
+                      android:textSize="17.0sp"/>
+        </android.support.v7.widget.Toolbar>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:background="@color/white"
+                          android:minHeight="44.0dip"
+                          android:orientation="horizontal">
+                <RelativeLayout
+                    android:id="@+id/comment_list_merchandise_comment_tab"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/comment_list_merchandise_comment_tab_title_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/comment_list_merchandise_comment_tab_title"
+                        android:textColor="@color/primary_black"
+                        android:textSize="14.0sp"/>
+                    <View
+                        android:id="@+id/comment_list_merchandise_comment_tab_strip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="2.0dip"
+                        android:layout_alignLeft="@id/comment_list_merchandise_comment_tab_title_tv"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignRight="@id/comment_list_merchandise_comment_tab_title_tv"
+                        android:layout_marginBottom="5.0dip"
+                        android:background="@color/primary_black"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/comment_list_brand_comment_tab"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/comment_list_brand_comment_tab_title_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/comment_list_brand_comment_tab_title"
+                        android:textColor="@color/primary_black"
+                        android:textSize="14.0sp"/>
+                    <View
+                        android:id="@+id/comment_list_brand_comment_tab_strip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="2.0dip"
+                        android:layout_alignLeft="@id/comment_list_brand_comment_tab_title_tv"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignRight="@id/comment_list_brand_comment_tab_title_tv"
+                        android:layout_marginBottom="5.0dip"
+                        android:background="@color/primary_black"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/shape_line_light_cyan"/>
+        </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+    <com.gxg.administrator.mydemo7.RefreshHeaderLayout.CustomViewPager
+        android:id="@+id/comment_list_view_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+</android.support.design.widget.CoordinatorLayout>

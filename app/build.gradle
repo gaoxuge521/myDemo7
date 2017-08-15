@@ -18,6 +18,7 @@ android {
             res.srcDir "src/main/res/pubuliu"
             res.srcDir "src/main/res/pubuliuhead"
             res.srcDir "src/main/res/alivlayout"
+            res.srcDir "src/main/res/pictures"
         }
     }
     buildTypes {
@@ -45,4 +46,6 @@ dependencies {
     //        transitive = true
     //    }
     compile project(':vlayout')
+    compile project(':takephoto_library')
+    compile project(':libraryzxing')
 }

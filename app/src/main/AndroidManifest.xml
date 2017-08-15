@@ -23,6 +23,12 @@
         </activity>
         <activity android:name=".alivlayout.AliVLayoutActivity">
         </activity>
+        <activity android:name=".RefreshHeaderLayout.RefreshHeaderLayoutActivity">
+        </activity>
+        <activity android:name=".pictures.PicturesActivity">
+        </activity>
+        <activity android:name=".zxing.ZXingActivity">
+        </activity>
     </application>
 
 </manifest>
