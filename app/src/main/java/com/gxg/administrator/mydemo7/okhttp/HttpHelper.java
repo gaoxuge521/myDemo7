@@ -191,11 +191,6 @@ public class HttpHelper {
                                     callBack.onError(msg);
                                 }
                             }
-
-
-
-
-
                         } catch (JSONException e) {
                             e.printStackTrace();
                             Log.e("sss", "onResponse: "+e.getMessage() );

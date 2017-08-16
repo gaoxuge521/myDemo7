@@ -20,6 +20,8 @@ android {
             res.srcDir "src/main/res/alivlayout"
             res.srcDir "src/main/res/pictures"
             res.srcDir "src/main/res/scrolldemo"
+            res.srcDir "src/main/res/designtest"
+            res.srcDir "src/main/res/headscroll"
         }
     }
     buildTypes {
@@ -52,4 +54,8 @@ dependencies {
     compile project(':vlayout')
     compile project(':takephoto_library')
     compile project(':libraryzxing')
+
+
+    //轮播图
+    compile 'com.bigkoo:convenientbanner:2.0.5'
 }

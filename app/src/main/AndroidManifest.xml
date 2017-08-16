@@ -3,6 +3,7 @@
           package="com.gxg.administrator.mydemo7">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name=".BaseApplication"
         android:allowBackup="true"
@@ -34,6 +35,18 @@
         <activity android:name=".scrolldemo.ScrollDemoActivity">
         </activity>
         <activity android:name=".okhttp.OkHttpActivity">
+        </activity>
+        <activity android:name=".webview.WebViewActivity">
+        </activity>
+        <activity android:name=".designtest.DesignTestActivity">
+        </activity>
+        <activity android:name=".designtest.DesignTest1Activity">
+        </activity>
+        <activity
+            android:name=".designtest.test2.DesignTest2Activity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".headscroll.HeadScrollActivity">
         </activity>
     </application>
 

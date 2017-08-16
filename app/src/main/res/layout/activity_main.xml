@@ -3,68 +3,104 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:orientation="vertical"
     tools:context="com.gxg.administrator.mydemo7.MainActivity">
 
-    <TextView
-        android:gravity="center"
-        android:textSize="14sp"
-        android:id="@+id/rv_pbl"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="瀑布流"/>
-    <TextView
-        android:gravity="center"
-        android:textSize="14sp"
-        android:id="@+id/rv_head"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="瀑布流头部"/>
-    <TextView
-        android:gravity="center"
-        android:textSize="14sp"
-        android:id="@+id/rv_ali"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="阿里的Vlayout"/>
-    <TextView
-        android:gravity="center"
-        android:textSize="14sp"
-        android:id="@+id/rv_fre_head"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="RefreshHeaderLayout"/>
 
-    <TextView
-        android:gravity="center"
-        android:textSize="14sp"
-        android:id="@+id/iv_picture"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="获取相册或者相机的图片"/>
-    <TextView
-        android:gravity="center"
-        android:textSize="14sp"
-        android:id="@+id/iv_zxing"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="生成和扫描二维码"/>
-    <TextView
-        android:gravity="center"
-        android:textSize="14sp"
-        android:id="@+id/tv_scroll"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="详情页滑动效果"/>
-    <TextView
-        android:gravity="center"
-        android:textSize="14sp"
-        android:id="@+id/tv_okhttp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="OKHTTP请求"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/rv_pbl"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:gravity="center"
+                android:text="瀑布流"
+                android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/rv_head"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="瀑布流头部"
+                android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/rv_ali"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="阿里的Vlayout"
+                android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/rv_fre_head"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="RefreshHeaderLayout"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/iv_picture"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="获取相册或者相机的图片"
+                android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/iv_zxing"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="生成和扫描二维码"
+                android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/tv_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="详情页滑动效果"
+                android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/tv_okhttp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="OKHTTP请求"
+                android:textSize="14sp"/>
+                android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/tv_web"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="webview加载https"
+                android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/tv_design"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="design练习"
+                android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/tv_headscroll"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="共同头部的viewpager"
+                android:textSize="14sp"/>
+
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:padding="5dp"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/item_fm_title"
+            android:lines="1"
+            android:ellipsize="end"
+            android:text="标题标题标标题标题题标题标题标题"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:gravity="bottom"
+            android:layout_gravity="bottom"
+            android:lines="3"
+            android:ellipsize="end"
+            android:text="一个人应该养成依赖自己的习惯，即使在最危险的时候也要相信自己的勇敢和毅力    ---拿破仑"
+            android:textColor="#666666"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:src="@drawable/yidian_1167278026"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+</LinearLayout>
