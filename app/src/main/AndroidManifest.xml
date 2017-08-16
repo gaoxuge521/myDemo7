@@ -29,6 +29,10 @@
         </activity>
         <activity android:name=".zxing.ZXingActivity">
         </activity>
+        <activity android:name=".scrolldemo.ScrollDemoActivity">
+        </activity>
+        <activity android:name=".okhttp.OkHttpActivity">
+        </activity>
     </application>
 
 </manifest>
