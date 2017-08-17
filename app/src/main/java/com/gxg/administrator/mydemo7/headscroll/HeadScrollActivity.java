@@ -6,6 +6,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -14,6 +15,8 @@ import android.widget.Toast;
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.bigkoo.convenientbanner.listener.OnItemClickListener;
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.listener.OnItemChildClickListener;
 import com.gxg.administrator.mydemo7.R;
 import com.gxg.administrator.mydemo7.headscroll.adapter.HeadFmPagerAdapter;
 import com.gxg.administrator.mydemo7.headscroll.adapter.HeadScrollAdapter;
@@ -53,6 +56,7 @@ public class HeadScrollActivity extends AppCompatActivity implements OnItemClick
     ArrayList<String> images = new ArrayList<String>();
     @Bind(R.id.head_vp_scroll)
     HeaderViewPager mHeadVpScroll;
+    private HeadScrollAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,7 +74,7 @@ public class HeadScrollActivity extends AppCompatActivity implements OnItemClick
 
     }
 
-    private String titles[] = {"最新", "价格", "热门", "筛选"};
+    private String titles[] = {"最新", "价格", "热门", "筛选","MFS","时尚","日记","趋势"};
     private List<HeaderViewPagerFragment> mFragments = new ArrayList<>();
 
     /**
@@ -86,7 +90,11 @@ public class HeadScrollActivity extends AppCompatActivity implements OnItemClick
         HeadFmPagerAdapter pagerAdapter = new HeadFmPagerAdapter(getSupportFragmentManager(), titles, mFragments);
         mViewPager.setAdapter(pagerAdapter);
         mTabLayout.setupWithViewPager(mViewPager);
-
+        if(titles.length>4){//条目多的话设置可以滑动
+            mTabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
+        }else{//条目少的话设置一屏展示
+            mTabLayout.setTabMode(TabLayout.MODE_FIXED);
+        }
         mHeadVpScroll.setCurrentScrollableContainer(mFragments.get(0));
         mViewPager.addOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
             @Override
@@ -94,8 +102,6 @@ public class HeadScrollActivity extends AppCompatActivity implements OnItemClick
                 mHeadVpScroll.setCurrentScrollableContainer(mFragments.get(position));
             }
         });
-
-
     }
 
 
@@ -113,8 +119,24 @@ public class HeadScrollActivity extends AppCompatActivity implements OnItemClick
             mHeadBeanList.add(headBean);
         }
 
-        HeadScrollAdapter adapter = new HeadScrollAdapter(mHeadBeanList);
-        mRvRecommendFollow.setAdapter(adapter);
+        mAdapter = new HeadScrollAdapter(mHeadBeanList);
+        mRvRecommendFollow.setAdapter(mAdapter);
+
+        mRvRecommendFollow.addOnItemTouchListener(new OnItemChildClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                showToast(mAdapter.getData().get(position).getName()+position);
+            }
+
+            @Override
+            public void onSimpleItemChildClick(BaseQuickAdapter adapter, View view, int position) {
+                switch (view.getId()){
+                    case R.id.item_head_iv:
+                        showToast("点击了图片"+position);
+                        break;
+                }
+            }
+        });
     }
 
     private void initBanner() {
@@ -142,10 +164,30 @@ public class HeadScrollActivity extends AppCompatActivity implements OnItemClick
                 .setPointViewVisible(!isSingleBanner)
                 .setCanLoop(!isSingleBanner);
 
+
         if (images.size() == 1)
             mFindBanner.setCanLoop(false);
     }
 
+    // 开始自动翻页
+    @Override
+    public void onResume() {
+        super.onResume();
+        //开始自动翻页
+        if (mFindBanner != null) {
+            mFindBanner.startTurning(5000);
+        }
+    }
+
+    // 停止自动翻页
+    @Override
+    public void onPause() {
+        super.onPause();
+        //停止翻页
+        if (mFindBanner != null) {
+            mFindBanner.stopTurning();
+        }
+    }
 
     @Override
     protected void onDestroy() {

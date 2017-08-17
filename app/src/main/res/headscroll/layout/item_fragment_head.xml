@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:padding="5dp"
+              android:background="@color/white"
               android:layout_height="wrap_content"
               android:orientation="horizontal">
 
@@ -34,6 +35,7 @@
     </LinearLayout>
 
     <ImageView
+        android:id="@+id/item_fm_iv"
         android:scaleType="fitXY"
         android:src="@drawable/yidian_1167278026"
         android:layout_width="100dp"

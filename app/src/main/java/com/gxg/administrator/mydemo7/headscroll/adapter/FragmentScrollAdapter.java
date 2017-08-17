@@ -10,7 +10,8 @@ import com.gxg.administrator.mydemo7.headscroll.bean.HeadBean;
 import java.util.List;
 
 /**
- * Created by lvliheng on 2017/8/16 at 19:03.
+ * Created by gapxuge on 2017/8/16 at 19:03.
+ *
  */
 
 public class FragmentScrollAdapter extends BaseQuickAdapter<HeadBean,BaseViewHolder>{
@@ -22,5 +23,7 @@ public class FragmentScrollAdapter extends BaseQuickAdapter<HeadBean,BaseViewHol
     @Override
     protected void convert(BaseViewHolder helper, HeadBean item) {
        helper.setText(R.id.item_fm_title,item.getName());
+
+       helper.addOnClickListener(R.id.item_fm_iv);
     }
 }

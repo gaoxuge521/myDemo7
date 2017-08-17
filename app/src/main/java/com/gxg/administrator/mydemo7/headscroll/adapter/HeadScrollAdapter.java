@@ -11,7 +11,8 @@ import com.gxg.administrator.mydemo7.headscroll.bean.HeadBean;
 import java.util.List;
 
 /**
- * Created by lvliheng on 2017/8/16 at 19:03.
+ * Created by gaoxuge on 2017/8/16 at 19:03.
+ *
  */
 
 public class HeadScrollAdapter extends BaseQuickAdapter<HeadBean,BaseViewHolder>{
@@ -24,5 +25,6 @@ public class HeadScrollAdapter extends BaseQuickAdapter<HeadBean,BaseViewHolder>
     protected void convert(BaseViewHolder helper, HeadBean item) {
         ImageView imageView = helper.getView(R.id.item_head_iv);
         imageView.setImageResource(item.getImg());
+        helper.addOnClickListener(R.id.item_head_iv);
     }
 }
