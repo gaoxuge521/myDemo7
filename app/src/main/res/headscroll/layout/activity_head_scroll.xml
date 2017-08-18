@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_head_scroll"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,8 +11,8 @@
         android:id="@+id/rl_title"
         android:layout_width="match_parent"
         android:layout_height="44dp"
-        android:gravity="center_vertical"
         android:background="@drawable/layer_shadow_top"
+        android:gravity="center_vertical"
         android:orientation="horizontal"
     >
         <TextView
@@ -21,71 +21,97 @@
             android:gravity="center"
             android:text="发现"
             android:textColor="#Fc535353"
-            android:textSize="18sp" />
+            android:textSize="18sp"/>
 
     </RelativeLayout>
-    <com.gxg.administrator.mydemo7.headscroll.view.HeaderViewPager
+    <com.gxg.administrator.mydemo7.headscroll.view.SuperSwipeRefreshLayout
+        android:id="@+id/refresh_headsrcoll"
         android:layout_width="match_parent"
-        android:id="@+id/head_vp_scroll"
+        android:layout_height="match_parent"
         android:layout_below="@id/rl_title"
-        android:orientation="vertical"
-        app:hvp_topOffset_head="50dp"
-        android:layout_height="match_parent">
-        <RelativeLayout
+        android:background="@color/white">
+
+
+        <com.gxg.administrator.mydemo7.headscroll.view.HeaderViewPager
+            android:id="@+id/head_vp_scroll"
             android:layout_width="match_parent"
-            android:layout_height="465dp">
-
-            <com.bigkoo.convenientbanner.ConvenientBanner
-                android:id="@+id/findBanner"
-                android:layout_width="match_parent"
-                android:layout_height="185dp"
-                app:canLoop="true" />
-
-
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:hvp_topOffset_head="0dp">
             <LinearLayout
-                android:layout_below="@id/findBanner"
-                android:id="@+id/ll_recommend_follow"
                 android:layout_width="match_parent"
-                android:layout_height="230dp"
-                android:background="#f6f6f6"
+                android:layout_height="415dp"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/tv_interesteds"
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:paddingStart="15dp"
-                    android:gravity="center_vertical"
-                    android:text="关注感兴趣的"
-                    android:textColor="#666666"
-                    android:textSize="13sp" />
-
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/rv_recommend_follow"
+                <com.bigkoo.convenientbanner.ConvenientBanner
+                    android:id="@+id/findBanner"
                     android:layout_width="match_parent"
                     android:layout_height="185dp"
+                    app:canLoop="true"/>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_recommend_follow"
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
                     android:background="#f6f6f6"
-                    android:paddingBottom="10dp" />
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_interesteds"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="15dp"
+                        android:text="关注感兴趣的"
+                        android:textColor="#666666"
+                        android:textSize="13sp"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_recommend_follow"
+                        android:layout_width="match_parent"
+                        android:layout_height="185dp"
+                        android:background="#f6f6f6"
+                        android:paddingBottom="10dp"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 
-            <android.support.design.widget.TabLayout
-                android:layout_below="@id/ll_recommend_follow"
-                android:id="@+id/tabLayout"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/layer_shadow_top"
-                app:layout_scrollFlags="enterAlways|exitUntilCollapsed"
-                app:tabIndicatorColor="#F65A5A"
-                app:tabIndicatorHeight="3dp"
-                app:tabSelectedTextColor="#F65A5A"
-                app:tabTextColor="#333333" />
-        </RelativeLayout>
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+                <FrameLayout
+                    android:id="@+id/fl_second_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-        <android.support.v4.view.ViewPager
-            android:id="@+id/viewPager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-    </com.gxg.administrator.mydemo7.headscroll.view.HeaderViewPager>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
+                        <android.support.design.widget.TabLayout
+                            android:id="@+id/tabLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@id/ll_recommend_follow"
+                            android:background="@drawable/layer_shadow_top"
+                            app:layout_scrollFlags="enterAlways|exitUntilCollapsed"
+                            app:tabIndicatorColor="#F65A5A"
+                            app:tabIndicatorHeight="3dp"
+                            app:tabSelectedTextColor="#F65A5A"
+                            app:tabTextColor="#333333"/>
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/viewPager"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+        </com.gxg.administrator.mydemo7.headscroll.view.HeaderViewPager>
+    </com.gxg.administrator.mydemo7.headscroll.view.SuperSwipeRefreshLayout>
 </RelativeLayout>

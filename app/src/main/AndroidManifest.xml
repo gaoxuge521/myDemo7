@@ -48,6 +48,10 @@
         </activity>
         <activity android:name=".headscroll.HeadScrollActivity">
         </activity>
+        <activity android:name=".rxjavaRetrofit.http.HttpRetrofitActivity">
+        </activity>
+        <activity android:name=".iswiperefreshlayout.IRecycleviewActivity">
+        </activity>
     </application>
 
 </manifest>

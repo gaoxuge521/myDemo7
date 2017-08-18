@@ -1,6 +1,7 @@
 package com.gxg.administrator.mydemo7.headscroll;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -26,6 +27,7 @@ import com.gxg.administrator.mydemo7.headscroll.urils.Contans;
 import com.gxg.administrator.mydemo7.headscroll.urils.LocalImageHolderView;
 import com.gxg.administrator.mydemo7.headscroll.view.HeaderViewPager;
 import com.gxg.administrator.mydemo7.headscroll.view.HeaderViewPagerFragment;
+import com.gxg.administrator.mydemo7.headscroll.view.SuperSwipeRefreshLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,6 +54,8 @@ public class HeadScrollActivity extends AppCompatActivity implements OnItemClick
     ViewPager mViewPager;
     @Bind(R.id.activity_head_scroll)
     RelativeLayout mActivityHeadScroll;
+    @Bind(R.id.refresh_headsrcoll)
+    SuperSwipeRefreshLayout refresh_headsrcoll;
 
     ArrayList<String> images = new ArrayList<String>();
     @Bind(R.id.head_vp_scroll)
@@ -68,9 +72,43 @@ public class HeadScrollActivity extends AppCompatActivity implements OnItemClick
 
         initHorizontalRecycle();
 
+//        refresh_headsrcoll.setHeaderView(View.inflate(this,R.layout.refresh_view,refresh_headsrcoll));
 
         addFragment();
 
+        mHeadVpScroll.setOnScrollListener(new HeaderViewPager.OnScrollListener() {
+            @Override
+            public void onScroll(int currentY, int maxY) {
+
+                if (currentY == 0) {
+                    refresh_headsrcoll.setEnabled(true);
+                } else {
+                    refresh_headsrcoll.setEnabled(false);
+                }
+            }
+        });
+
+        refresh_headsrcoll.setOnRefreshListener(new SuperSwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        refresh_headsrcoll.setRefreshing(false);
+                    }
+                },1000);
+            }
+
+            @Override
+            public void onPullDistance(int distance) {
+
+            }
+
+            @Override
+            public void onPullEnable(boolean enable) {
+
+            }
+        });
 
     }
 

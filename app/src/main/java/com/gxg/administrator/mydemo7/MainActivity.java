@@ -10,6 +10,7 @@ import com.gxg.administrator.mydemo7.RefreshHeaderLayout.RefreshHeaderLayoutActi
 import com.gxg.administrator.mydemo7.alivlayout.AliVLayoutActivity;
 import com.gxg.administrator.mydemo7.designtest.DesignTestActivity;
 import com.gxg.administrator.mydemo7.headscroll.HeadScrollActivity;
+import com.gxg.administrator.mydemo7.iswiperefreshlayout.IRecycleviewActivity;
 import com.gxg.administrator.mydemo7.okhttp.OkHttpActivity;
 import com.gxg.administrator.mydemo7.pictures.PicturesActivity;
 import com.gxg.administrator.mydemo7.pubuliu.RecycleViewDemo;
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.tv_headscroll,R.id.tv_design,R.id.tv_web,R.id.tv_okhttp, R.id.tv_scroll, R.id.iv_zxing, R.id.rv_pbl, R.id.rv_head, R.id.rv_ali, R.id.rv_fre_head, R.id.iv_picture})
+    @OnClick({R.id.refresh_item,R.id.tv_headscroll,R.id.tv_design,R.id.tv_web,R.id.tv_okhttp, R.id.tv_scroll, R.id.iv_zxing, R.id.rv_pbl, R.id.rv_head, R.id.rv_ali, R.id.rv_fre_head, R.id.iv_picture})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.rv_pbl:
@@ -77,6 +78,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.tv_headscroll:
                 startActivity(new Intent(MainActivity.this, HeadScrollActivity.class));
                 break;
+            case R.id.refresh_item:
+                startActivity(new Intent(MainActivity.this, IRecycleviewActivity.class));
+                break;
+
         }
     }
 }

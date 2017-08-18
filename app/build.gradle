@@ -22,6 +22,7 @@ android {
             res.srcDir "src/main/res/scrolldemo"
             res.srcDir "src/main/res/designtest"
             res.srcDir "src/main/res/headscroll"
+            res.srcDir "src/main/res/irefreshlayout"
         }
     }
     buildTypes {
@@ -48,9 +49,7 @@ dependencies {
 
     compile 'com.squareup.okhttp3:okhttp:3.6.0'
     compile 'com.squareup.okio:okio:1.11.0'
-    //    compile ('com.alibaba.android:vlayout:1.0.9@aar') {
-    //        transitive = true
-    //    }
+
     compile project(':vlayout')
     compile project(':takephoto_library')
     compile project(':libraryzxing')
@@ -58,4 +57,8 @@ dependencies {
 
     //轮播图
     compile 'com.bigkoo:convenientbanner:2.0.5'
+
+    //gif图
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.5'
+
 }

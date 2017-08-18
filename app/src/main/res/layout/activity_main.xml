@@ -99,6 +99,13 @@
                 android:gravity="center"
                 android:text="共同头部的viewpager"
                 android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/refresh_item"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="下拉"
+                android:textSize="14sp"/>
 
 
         </LinearLayout>
