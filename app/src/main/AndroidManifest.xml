@@ -52,6 +52,10 @@
         </activity>
         <activity android:name=".iswiperefreshlayout.IRecycleviewActivity">
         </activity>
+        <activity android:name=".yinying.YinYingActivity">
+        </activity>
+        <activity android:name=".tongzhilan.TongZhiLanActivity">
+        </activity>
     </application>
 
 </manifest>

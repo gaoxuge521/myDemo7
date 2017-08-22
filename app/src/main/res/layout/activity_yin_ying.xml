@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_yin_ying"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.gxg.administrator.mydemo7.yinying.YinYingActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_ll"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="我是LinearLayout四周都有阴影"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:text="左边下边有阴影"
+        android:textSize="18sp"/>
+
+    <ImageView
+        android:id="@+id/iv_iv"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/yidian_1167278026"/>
+
+
+    <TextView
+        android:paddingBottom="10dp"
+        android:background="#f00"
+        android:layout_marginTop="15dp"
+        android:id="@+id/view_view"
+        android:gravity="center"
+        android:text="哈哈哈哈或"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"/>
+
+
+</LinearLayout>

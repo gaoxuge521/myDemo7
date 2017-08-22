@@ -107,7 +107,21 @@
                 android:text="下拉"
                 android:textSize="14sp"/>
 
+            <TextView
+                android:id="@+id/view_addyinying"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="任意view添加阴影"
+                android:textSize="14sp"/>
 
+            <TextView
+                android:id="@+id/view_tongzhilan"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="通知栏"
+                android:textSize="14sp"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

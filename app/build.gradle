@@ -46,19 +46,16 @@ dependencies {
     compile 'com.android.support:design:25.3.1'
     compile 'com.android.support:cardview-v7:25.3.1'
     compile 'com.github.anzaizai:EasyRefreshLayout:1.3.1'
-
     compile 'com.squareup.okhttp3:okhttp:3.6.0'
     compile 'com.squareup.okio:okio:1.11.0'
-
     compile project(':vlayout')
     compile project(':takephoto_library')
     compile project(':libraryzxing')
-
-
     //轮播图
     compile 'com.bigkoo:convenientbanner:2.0.5'
-
     //gif图
     compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.5'
-
+    //给任意view添加阴影
+//    compile 'com.github.wangjiegulu:ShadowViewHelper:1.0.2'
+    compile project(':yinyinglibrary')
 }
