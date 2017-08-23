@@ -151,6 +151,27 @@
                 android:gravity="center"
                 android:text="简单的倒计时空间"
                 android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/view_left_more"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="一个向左拖拽跳转至更多页面的通用控件"
+                android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/all_view_touming"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="Android 任意View边沿渐变透明"
+                android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/dingbu_xuanfu"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="Design顶部悬浮"
+                android:textSize="14sp"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

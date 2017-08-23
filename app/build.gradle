@@ -27,6 +27,9 @@ android {
             res.srcDir "src/main/res/allviewtouming"
             res.srcDir "src/main/res/tiaozhuanmore"
             res.srcDir "src/main/res/daojishi"
+            res.srcDir "src/main/res/zuolatiaozhuan"
+            res.srcDir "src/main/res/dingbuxuanfu"
+
         }
     }
     buildTypes {
