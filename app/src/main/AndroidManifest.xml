@@ -56,6 +56,17 @@
         </activity>
         <activity android:name=".tongzhilan.TongZhiLanActivity">
         </activity>
+        <activity android:name=".colorfulline.ColorFullIneActivity">
+        </activity>
+        <activity android:name=".wxpwd.WxPwdActivity">
+        </activity>
+        <activity android:name=".shijuexiaoguo.ShiJueTeXiaoActivity">
+        </activity>
+        <activity android:name=".daojishi.DaoJiShiActivity">
+        </activity>
+        <activity android:name=".daojishi.ShowActivity"/>
+        <activity android:name=".daojishi.SettingActivity"/>
+        <activity android:name=".daojishi.CompletedActivity"/>
     </application>
 
 </manifest>

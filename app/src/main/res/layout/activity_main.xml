@@ -122,6 +122,35 @@
                 android:gravity="center"
                 android:text="通知栏"
                 android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/view_colorline"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="各种虚线"
+                android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/view_wxpay"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="放微信支付密码框"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/view_shijuetexiao"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="很炫的视觉特效"
+                android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/view_daojishi"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="简单的倒计时空间"
+                android:textSize="14sp"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

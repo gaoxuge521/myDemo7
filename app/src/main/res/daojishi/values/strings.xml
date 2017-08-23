@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="setting_hour_button">H = 01</string>
+    <string name="setting_minute_button">M = 01</string>
+    <string name="setting_second_button">S = 01</string>
+    <string name="setting_start_button">Start</string>
+    <string name="setting_stop_button">Stop</string>
+</resources>

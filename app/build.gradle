@@ -23,6 +23,10 @@ android {
             res.srcDir "src/main/res/designtest"
             res.srcDir "src/main/res/headscroll"
             res.srcDir "src/main/res/irefreshlayout"
+            res.srcDir "src/main/res/wxpwd"
+            res.srcDir "src/main/res/allviewtouming"
+            res.srcDir "src/main/res/tiaozhuanmore"
+            res.srcDir "src/main/res/daojishi"
         }
     }
     buildTypes {

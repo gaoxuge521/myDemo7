@@ -110,6 +110,23 @@ public class HeadScrollActivity extends AppCompatActivity implements OnItemClick
             }
         });
 
+//        refresh_headsrcoll.setOnPushLoadMoreListener(new SuperSwipeRefreshLayout.OnPushLoadMoreListener() {
+//            @Override
+//            public void onLoadMore() {
+//
+//            }
+//
+//            @Override
+//            public void onPushDistance(int distance) {
+//
+//            }
+//
+//            @Override
+//            public void onPushEnable(boolean enable) {
+//
+//            }
+//        });
+
     }
 
     private String titles[] = {"最新", "价格", "热门", "筛选","MFS","时尚","日记","趋势"};

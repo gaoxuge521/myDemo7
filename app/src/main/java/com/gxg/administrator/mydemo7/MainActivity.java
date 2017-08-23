@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import com.gxg.administrator.mydemo7.RefreshHeaderLayout.RefreshHeaderLayoutActivity;
 import com.gxg.administrator.mydemo7.alivlayout.AliVLayoutActivity;
+import com.gxg.administrator.mydemo7.colorfulline.ColorFullIneActivity;
+import com.gxg.administrator.mydemo7.daojishi.DaoJiShiActivity;
 import com.gxg.administrator.mydemo7.designtest.DesignTestActivity;
 import com.gxg.administrator.mydemo7.headscroll.HeadScrollActivity;
 import com.gxg.administrator.mydemo7.iswiperefreshlayout.IRecycleviewActivity;
@@ -16,8 +18,10 @@ import com.gxg.administrator.mydemo7.pictures.PicturesActivity;
 import com.gxg.administrator.mydemo7.pubuliu.RecycleViewDemo;
 import com.gxg.administrator.mydemo7.pubuliuhead.MyPubuliuActivity;
 import com.gxg.administrator.mydemo7.scrolldemo.ScrollDemoActivity;
+import com.gxg.administrator.mydemo7.shijuexiaoguo.ShiJueTeXiaoActivity;
 import com.gxg.administrator.mydemo7.tongzhilan.TongZhiLanActivity;
 import com.gxg.administrator.mydemo7.webview.WebViewActivity;
+import com.gxg.administrator.mydemo7.wxpwd.WxPwdActivity;
 import com.gxg.administrator.mydemo7.yinying.YinYingActivity;
 import com.gxg.administrator.mydemo7.zxing.ZXingActivity;
 
@@ -44,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.view_tongzhilan,R.id.view_addyinying,R.id.refresh_item,R.id.tv_headscroll,R.id.tv_design,R.id.tv_web,R.id.tv_okhttp, R.id.tv_scroll, R.id.iv_zxing, R.id.rv_pbl, R.id.rv_head, R.id.rv_ali, R.id.rv_fre_head, R.id.iv_picture})
+    @OnClick({R.id.view_daojishi,R.id.view_shijuetexiao,R.id.view_wxpay,R.id.view_colorline,R.id.view_tongzhilan,R.id.view_addyinying,R.id.refresh_item,R.id.tv_headscroll,R.id.tv_design,R.id.tv_web,R.id.tv_okhttp, R.id.tv_scroll, R.id.iv_zxing, R.id.rv_pbl, R.id.rv_head, R.id.rv_ali, R.id.rv_fre_head, R.id.iv_picture})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.rv_pbl:
@@ -88,6 +92,18 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.view_tongzhilan:
                 startActivity(new Intent(MainActivity.this, TongZhiLanActivity.class));
+                break;
+            case R.id.view_colorline:
+                startActivity(new Intent(MainActivity.this, ColorFullIneActivity.class));
+                break;
+            case R.id.view_wxpay:
+                startActivity(new Intent(MainActivity.this, WxPwdActivity.class));
+                break;
+            case R.id.view_shijuetexiao:
+                startActivity(new Intent(MainActivity.this, ShiJueTeXiaoActivity.class));
+                break;
+            case R.id.view_daojishi:
+                startActivity(new Intent(MainActivity.this, DaoJiShiActivity.class));
                 break;
 
         }

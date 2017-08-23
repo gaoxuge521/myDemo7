@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 控件之间的距离 -->
+    <dimen name="spacing_large">20dp</dimen>
+    <dimen name="spacing_normal">15dp</dimen>
+    <dimen name="spacing_small">10dp</dimen>
+    <dimen name="spacing_tiny">4dp</dimen>
+    <dimen name="divider_height">0.5dp</dimen>
+    <dimen name="spacing_layout_padding">10dp</dimen>
+    <dimen name="spacing_layout_margin">10dp</dimen>
+
+    <!-- 描述性文字item项的高 -->
+    <dimen name="text_item_height">43dp</dimen>
+    <dimen name="input_method_spacing">2px</dimen>
+</resources>
