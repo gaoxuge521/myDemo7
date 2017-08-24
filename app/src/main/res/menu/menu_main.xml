@@ -7,7 +7,6 @@
         android:icon="@mipmap/search_white"
         android:orderInCategory="80"
         android:title="search"
-
         app:showAsAction="ifRoom" />
     <!--分享菜单-->
     <item

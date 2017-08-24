@@ -20,11 +20,13 @@ import com.gxg.administrator.mydemo7.pictures.PicturesActivity;
 import com.gxg.administrator.mydemo7.pubuliu.RecycleViewDemo;
 import com.gxg.administrator.mydemo7.pubuliuhead.MyPubuliuActivity;
 import com.gxg.administrator.mydemo7.scrolldemo.ScrollDemoActivity;
+import com.gxg.administrator.mydemo7.shichagundong.ShiChaGunDongActivity;
 import com.gxg.administrator.mydemo7.shijuexiaoguo.ShiJueTeXiaoActivity;
 import com.gxg.administrator.mydemo7.tongzhilan.TongZhiLanActivity;
 import com.gxg.administrator.mydemo7.webview.WebViewActivity;
 import com.gxg.administrator.mydemo7.wxpwd.WxPwdActivity;
 import com.gxg.administrator.mydemo7.yinying.YinYingActivity;
+import com.gxg.administrator.mydemo7.zhihu.ZhiHuActivity;
 import com.gxg.administrator.mydemo7.zuolatiaozhuan.HomeActivity;
 import com.gxg.administrator.mydemo7.zxing.ZXingActivity;
 
@@ -51,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.dingbu_xuanfu,R.id.all_view_touming,R.id.view_left_more,R.id.view_daojishi,R.id.view_shijuetexiao,R.id.view_wxpay,R.id.view_colorline,R.id.view_tongzhilan,R.id.view_addyinying,R.id.refresh_item,R.id.tv_headscroll,R.id.tv_design,R.id.tv_web,R.id.tv_okhttp, R.id.tv_scroll, R.id.iv_zxing, R.id.rv_pbl, R.id.rv_head, R.id.rv_ali, R.id.rv_fre_head, R.id.iv_picture})
+    @OnClick({R.id.shichagundong,R.id.zhihu,R.id.dingbu_xuanfu,R.id.all_view_touming,R.id.view_left_more,R.id.view_daojishi,R.id.view_shijuetexiao,R.id.view_wxpay,R.id.view_colorline,R.id.view_tongzhilan,R.id.view_addyinying,R.id.refresh_item,R.id.tv_headscroll,R.id.tv_design,R.id.tv_web,R.id.tv_okhttp, R.id.tv_scroll, R.id.iv_zxing, R.id.rv_pbl, R.id.rv_head, R.id.rv_ali, R.id.rv_fre_head, R.id.iv_picture})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.rv_pbl:
@@ -116,6 +118,12 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.dingbu_xuanfu:
                 startActivity(new Intent(MainActivity.this, DingBuXuanFuActivity.class));
+                break;
+            case R.id.zhihu:
+                startActivity(new Intent(MainActivity.this, ZhiHuActivity.class));
+                break;
+            case R.id.shichagundong:
+                startActivity(new Intent(MainActivity.this, ShiChaGunDongActivity.class));
                 break;
 
         }

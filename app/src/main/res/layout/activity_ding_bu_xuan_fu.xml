@@ -11,6 +11,7 @@
            给你的可滑动的组件，也就是RecyclerView 或者 NestedScrollView、ListView，ScrollView等设置如下属性：
             app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
     <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coorlayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -25,6 +26,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fitsSystemWindows="true"
+            android:id="@+id/appbar_layout"
+            app:layout_behavior="com.gxg.administrator.mydemo7.dingbuxuanfu.FlingBehavior"
         >
 
             <!--滑动到顶部折叠-->
@@ -33,7 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fitsSystemWindows="true"
-                app:contentScrim="?attr/colorPrimary"
+                app:contentScrim="#193807"
                 app:expandedTitleMarginEnd="64dp"
                 app:expandedTitleMarginStart="48dp"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed">
@@ -44,35 +47,32 @@
            exitUntilCollapsed: 滚动退出屏幕，最后折叠在顶端。-->
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="250dp"
                     android:fitsSystemWindows="true"
                     android:scaleType="fitXY"
                     android:src="@drawable/yidian_1167278026"
                     app:layout_collapseMode="parallax"
-                    app:layout_collapseParallaxMultiplier="0.1"/>
+                  />
                 <android.support.v7.widget.Toolbar
                     android:id="@+id/toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
-                    app:title="这是标题"
                     app:layout_collapseMode="pin"
                     app:layout_scrollFlags="scroll|enterAlways"
-                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+                    >
 
+                    <TextView
+
+                        android:id="@+id/title"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="这是标题啊啊啊啊"/>
                 </android.support.v7.widget.Toolbar>
 
 
             </android.support.design.widget.CollapsingToolbarLayout>
-
-
-            <!--<TextView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="60dp"-->
-            <!--android:background="@android:color/holo_red_light"-->
-            <!--android:gravity="center"-->
-            <!--android:text="固定在顶部的导航栏"-->
-            <!--android:textColor="@android:color/white"-->
-            <!--android:textSize="20sp" />-->
         </android.support.design.widget.AppBarLayout>
 
         <!--主页面布局-->
@@ -80,6 +80,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+
             android:scrollbars="none"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
             <android.support.design.widget.TabLayout
@@ -97,8 +98,6 @@
 
             </android.support.v4.view.ViewPager>
         </LinearLayout>
-
-
     </android.support.design.widget.CoordinatorLayout>
 
 </LinearLayout>

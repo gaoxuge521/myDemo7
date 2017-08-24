@@ -1,6 +1,8 @@
 package com.gxg.administrator.mydemo7.dingbuxuanfu;
 
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -12,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.gxg.administrator.mydemo7.R;
 import com.gxg.administrator.mydemo7.headscroll.fragment.Head1Fragment;
@@ -27,6 +30,12 @@ public class DingBuXuanFuActivity extends AppCompatActivity {
     TabLayout mTabLayout;
     @Bind(R.id.vp)
     ViewPager mVp;
+    @Bind(R.id.coorlayout)
+    CoordinatorLayout mCoorlayout;
+    @Bind(R.id.appbar_layout)
+    AppBarLayout mAppbarLayout;
+    @Bind(R.id.title)
+    TextView title;
 //    @Bind(R.id.toolbar)
 //    Toolbar toolbar;
     /**
@@ -40,6 +49,7 @@ public class DingBuXuanFuActivity extends AppCompatActivity {
     private String titles[] = {"最新", "价格", "热门", "筛选", "MFS", "时尚", "日记", "趋势"};
     private VpAdapter mAdapter;
 
+    private int alfterverticalOffset;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,6 +85,21 @@ public class DingBuXuanFuActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         initFragment();
+
+        mAppbarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
+
+            @Override
+            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+
+                //控制下来
+//                if (i == 0) {
+//                    mSwipeRefreshLayout.setEnabled(true);
+//                } else {
+//                    mSwipeRefreshLayout.setEnabled(false);
+//                }
+
+            }
+        });
     }
 
     List<Fragment> mFragments = new ArrayList<>();

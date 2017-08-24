@@ -29,6 +29,8 @@ android {
             res.srcDir "src/main/res/daojishi"
             res.srcDir "src/main/res/zuolatiaozhuan"
             res.srcDir "src/main/res/dingbuxuanfu"
+            res.srcDir "src/main/res/zhihu"
+            res.srcDir "src/main/res/shichagundong"
 
         }
     }
@@ -63,6 +65,7 @@ dependencies {
     //gif图
     compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.5'
     //给任意view添加阴影
-//    compile 'com.github.wangjiegulu:ShadowViewHelper:1.0.2'
+    //    compile 'com.github.wangjiegulu:ShadowViewHelper:1.0.2'
     compile project(':yinyinglibrary')
+    compile project(':scrollparallaximageview')
 }

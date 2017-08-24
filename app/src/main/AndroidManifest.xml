@@ -73,6 +73,12 @@
         </activity>
         <activity android:name=".dingbuxuanfu.DingBuXuanFuActivity">
         </activity>
+        <activity android:name=".zhihu.ZhiHuActivity">
+        </activity>
+        <activity android:name=".shichagundong.ShiChaGunDongActivity">
+        </activity>
+        <activity android:name=".shichagundong.VerticalSampleActivity"/>
+        <activity android:name=".shichagundong.HorizontalSampleActivity"/>
     </application>
 
 </manifest>
