@@ -68,4 +68,5 @@ dependencies {
     //    compile 'com.github.wangjiegulu:ShadowViewHelper:1.0.2'
     compile project(':yinyinglibrary')
     compile project(':scrollparallaximageview')
+    compile project(':parallaxlibrary')
 }

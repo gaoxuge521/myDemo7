@@ -22,4 +22,7 @@ public class ShiChaGunDongActivity extends AppCompatActivity {
     public void openHorizontalSample(View view) {
         startActivity(new Intent(this, HorizontalSampleActivity.class));
     }
+    public void openContentSample(View view) {
+        startActivity(new Intent(this, ParallaxEverywhereSample.class));
+    }
 }
