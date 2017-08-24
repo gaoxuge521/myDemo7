@@ -1,6 +1,7 @@
 package com.gxg.administrator.mydemo7.dingbuxuanfu;
 
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -8,6 +9,9 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 
 import com.gxg.administrator.mydemo7.R;
 import com.gxg.administrator.mydemo7.headscroll.fragment.Head1Fragment;
@@ -23,8 +27,8 @@ public class DingBuXuanFuActivity extends AppCompatActivity {
     TabLayout mTabLayout;
     @Bind(R.id.vp)
     ViewPager mVp;
-    @Bind(R.id.toolbar)
-    Toolbar toolbar;
+//    @Bind(R.id.toolbar)
+//    Toolbar toolbar;
     /**
      * app:layout_scrollFlags属性里面必须至少启用scroll这个flag，这样这个view才会滚动出屏幕，否则它将一直固定在顶部。可以使用的其他flag有：
      * enterAlways: 一旦向上滚动这个view就可见。
@@ -40,8 +44,33 @@ public class DingBuXuanFuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ding_bu_xuan_fu);
+        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.setNavigationIcon(R.drawable.back_white_smoll);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.action_search://因为使用android.support.v7.widget.SearchView类，可以在
+                        Snackbar.make(toolbar, "搜索", Snackbar.LENGTH_SHORT).show();
+                        break;
+                    case R.id.action_share:
+                        Snackbar.make(toolbar, "分享", Snackbar.LENGTH_SHORT).show();
+                        break;
+                    case R.id.action_more:
+                        Snackbar.make(toolbar, "更多", Snackbar.LENGTH_SHORT).show();
+                        break;
+                }
+                return true;
+            }
+        });
 
         ButterKnife.bind(this);
 
@@ -56,9 +85,9 @@ public class DingBuXuanFuActivity extends AppCompatActivity {
             mFragments.add(fragment);
         }
 
-        if(titles.length>4){//条目多的话设置可以滑动
+        if (titles.length > 4) {//条目多的话设置可以滑动
             mTabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
-        }else{//条目少的话设置一屏展示
+        } else {//条目少的话设置一屏展示
             mTabLayout.setTabMode(TabLayout.MODE_FIXED);
         }
 
@@ -70,7 +99,7 @@ public class DingBuXuanFuActivity extends AppCompatActivity {
 
     }
 
-    public class VpAdapter extends FragmentPagerAdapter{
+    public class VpAdapter extends FragmentPagerAdapter {
 
         public VpAdapter(FragmentManager fm) {
             super(fm);
@@ -93,4 +122,9 @@ public class DingBuXuanFuActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
 }

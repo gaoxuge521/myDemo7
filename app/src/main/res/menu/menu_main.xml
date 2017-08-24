@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--搜索菜单-->
+    <!--app:actionViewClass="android.support.v7.widget.SearchView"-->
+    <item
+        android:id="@+id/action_search"
+        android:icon="@mipmap/search_white"
+        android:orderInCategory="80"
+        android:title="search"
+
+        app:showAsAction="ifRoom" />
+    <!--分享菜单-->
+    <item
+        android:id="@+id/action_share"
+        android:icon="@mipmap/share_white"
+        android:orderInCategory="90"
+        android:title="share"
+        app:showAsAction="ifRoom" />
+    <!--更多菜单-->
+    <item
+        android:id="@+id/action_more"
+        android:icon="@mipmap/more_whire"
+        android:orderInCategory="100"
+        android:title="more"
+        app:showAsAction="ifRoom" />
+</menu>

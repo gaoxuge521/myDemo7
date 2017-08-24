@@ -44,7 +44,7 @@
            exitUntilCollapsed: 滚动退出屏幕，最后折叠在顶端。-->
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="200dp"
                     android:fitsSystemWindows="true"
                     android:scaleType="fitXY"
                     android:src="@drawable/yidian_1167278026"
@@ -54,11 +54,9 @@
                     android:id="@+id/toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
-                    android:background="?attr/colorPrimary"
-                    android:title="这是标题"
+                    app:title="这是标题"
                     app:layout_collapseMode="pin"
                     app:layout_scrollFlags="scroll|enterAlways"
-                    app:logo="@mipmap/ic_launcher"
                     app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
                 </android.support.v7.widget.Toolbar>
