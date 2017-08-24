@@ -14,7 +14,7 @@ import android.view.View;
  */
 
 public class FlingBehavior extends AppBarLayout.Behavior {
-    private static final String TAG = FlingBehavior.class.getName();
+    private static final String TAG = "sss";
     private static final int TOP_CHILD_FLING_THRESHOLD = 1;
     private static final float OPTIMAL_FLING_VELOCITY = 3500;
     private static final float MIN_FLING_VELOCITY = 20;
@@ -35,12 +35,32 @@ public class FlingBehavior extends AppBarLayout.Behavior {
 
         super.onNestedPreScroll(coordinatorLayout, child, target, velocityX, velocityY, consumed);
 
+        Log.e("sss","velocityY  "+velocityY);
         if (velocityY > MIN_FLING_VELOCITY) {
             shouldFling = true;
             flingVelocityY = velocityY;
         } else {
             shouldFling = false;
         }
+
+    }
+
+
+    /**
+     * 这个behavior用于当滚动发生的时候让AppBarLayout发生改变。
+     */
+
+    @Override
+    public boolean layoutDependsOn(CoordinatorLayout parent, AppBarLayout child, View dependency) {
+        return super.layoutDependsOn(parent, child, dependency);
+    }
+
+    /**
+     * 这个behavior用于当滚动发生的时候让AppBarLayout发生改变。
+     */
+    @Override
+    public boolean onDependentViewChanged(CoordinatorLayout parent, AppBarLayout child, View dependency) {
+        return super.onDependentViewChanged(parent, child, dependency);
     }
 
     @Override
@@ -55,17 +75,20 @@ public class FlingBehavior extends AppBarLayout.Behavior {
     @Override
     public boolean onNestedFling(CoordinatorLayout coordinatorLayout, AppBarLayout child, View target,
                                  float velocityX, float velocityY, boolean consumed) {
-
+        Log.e(TAG, "onNestedFling:  velocityY  "+velocityY+"   velocityX"+velocityX);
         if (target instanceof RecyclerView && velocityY < 0) {
-            Log.d(TAG, "onNestedFling: target is recyclerView");
+            Log.e(TAG, "onNestedFling: target is recyclerView");
             final RecyclerView recyclerView = (RecyclerView) target;
             final View firstChild = recyclerView.getChildAt(0);
+            Log.e(TAG, " firstChild  "+firstChild);
             final int childAdapterPosition = recyclerView.getChildAdapterPosition(firstChild);
+            Log.e(TAG, " childAdapterPosition  "+childAdapterPosition);
             consumed = childAdapterPosition > TOP_CHILD_FLING_THRESHOLD;
         }
 
         // prevent fling flickering when going up
         if (target instanceof NestedScrollView && velocityY > 0) {
+            Log.e(TAG, "onNestedFling: target is NestedScrollView");
             consumed = true;
         }
 

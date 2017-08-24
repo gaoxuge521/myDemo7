@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 
 import com.gxg.administrator.mydemo7.R;
 import com.gxg.administrator.mydemo7.headscroll.fragment.Head1Fragment;
@@ -22,6 +23,8 @@ public class DingBuXuanFuActivity extends AppCompatActivity {
     TabLayout mTabLayout;
     @Bind(R.id.vp)
     ViewPager mVp;
+    @Bind(R.id.toolbar)
+    Toolbar toolbar;
     /**
      * app:layout_scrollFlags属性里面必须至少启用scroll这个flag，这样这个view才会滚动出屏幕，否则它将一直固定在顶部。可以使用的其他flag有：
      * enterAlways: 一旦向上滚动这个view就可见。
@@ -37,6 +40,9 @@ public class DingBuXuanFuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ding_bu_xuan_fu);
+        setSupportActionBar(toolbar);
+
+
         ButterKnife.bind(this);
 
         initFragment();
