@@ -9,3 +9,5 @@ include ':takephoto_library'
 include ':libraryzxing'
 //任意view添加阴影
 include ':yinyinglibrary'
+include ':scrollparallaximageview'
+include ':parallaxlibrary'
