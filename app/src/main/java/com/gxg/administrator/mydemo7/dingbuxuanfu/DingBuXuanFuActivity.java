@@ -55,6 +55,7 @@ public class DingBuXuanFuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ding_bu_xuan_fu);
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("");
         setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(R.drawable.back_white_smoll);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {

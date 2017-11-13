@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.gxg.administrator.mydemo7">
+    package="com.gxg.administrator.mydemo7">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".BaseApplication"
@@ -13,74 +13,49 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".pubuliu.RecycleViewDemo">
-        </activity>
-        <activity android:name=".pubuliuhead.PubuliuHeadActivity">
-        </activity>
-        <activity android:name=".pubuliuhead.MyPubuliuActivity">
-        </activity>
-        <activity android:name=".alivlayout.AliVLayoutActivity">
-        </activity>
-        <activity android:name=".RefreshHeaderLayout.RefreshHeaderLayoutActivity">
-        </activity>
-        <activity android:name=".pictures.PicturesActivity">
-        </activity>
-        <activity android:name=".zxing.ZXingActivity">
-        </activity>
-        <activity android:name=".scrolldemo.ScrollDemoActivity">
-        </activity>
-        <activity android:name=".okhttp.OkHttpActivity">
-        </activity>
-        <activity android:name=".webview.WebViewActivity">
-        </activity>
-        <activity android:name=".designtest.DesignTestActivity">
-        </activity>
-        <activity android:name=".designtest.DesignTest1Activity">
-        </activity>
+        <activity android:name=".pubuliu.RecycleViewDemo"></activity>
+        <activity android:name=".pubuliuhead.PubuliuHeadActivity"></activity>
+        <activity android:name=".pubuliuhead.MyPubuliuActivity"></activity>
+        <activity android:name=".alivlayout.AliVLayoutActivity"></activity>
+        <activity android:name=".RefreshHeaderLayout.RefreshHeaderLayoutActivity"></activity>
+        <activity android:name=".pictures.PicturesActivity"></activity>
+        <activity android:name=".zxing.ZXingActivity"></activity>
+        <activity android:name=".scrolldemo.ScrollDemoActivity"></activity>
+        <activity android:name=".okhttp.OkHttpActivity"></activity>
+        <activity android:name=".webview.WebViewActivity"></activity>
+        <activity android:name=".designtest.DesignTestActivity"></activity>
+        <activity android:name=".designtest.DesignTest1Activity"></activity>
         <activity
             android:name=".designtest.test2.DesignTest2Activity"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity android:name=".headscroll.HeadScrollActivity">
-        </activity>
-        <activity android:name=".rxjavaRetrofit.http.HttpRetrofitActivity">
-        </activity>
-        <activity android:name=".iswiperefreshlayout.IRecycleviewActivity">
-        </activity>
-        <activity android:name=".yinying.YinYingActivity">
-        </activity>
-        <activity android:name=".tongzhilan.TongZhiLanActivity">
-        </activity>
-        <activity android:name=".colorfulline.ColorFullIneActivity">
-        </activity>
-        <activity android:name=".wxpwd.WxPwdActivity">
-        </activity>
-        <activity android:name=".shijuexiaoguo.ShiJueTeXiaoActivity">
-        </activity>
-        <activity android:name=".daojishi.DaoJiShiActivity">
-        </activity>
-        <activity android:name=".daojishi.ShowActivity"/>
-        <activity android:name=".daojishi.SettingActivity"/>
-        <activity android:name=".daojishi.CompletedActivity"/>
-        <activity android:name=".zuolatiaozhuan.HomeActivity"/>
-        <activity android:name=".zuolatiaozhuan.ShowMoreActivity"/>
-        <activity android:name=".allviewtouming.AllViewToumingActivity">
-        </activity>
-        <activity android:name=".dingbuxuanfu.DingBuXuanFuActivity">
-        </activity>
-        <activity android:name=".zhihu.ZhiHuActivity">
-        </activity>
-        <activity android:name=".shichagundong.ShiChaGunDongActivity">
-        </activity>
-        <activity android:name=".shichagundong.VerticalSampleActivity"/>
-        <activity android:name=".shichagundong.HorizontalSampleActivity"/>
-        <activity android:name=".shichagundong.ParallaxEverywhereSample"/>
-        <activity android:name=".shichagundong.AboutActivity"/>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".headscroll.HeadScrollActivity"></activity>
+        <activity android:name=".rxjavaRetrofit.http.HttpRetrofitActivity"></activity>
+        <activity android:name=".iswiperefreshlayout.IRecycleviewActivity"></activity>
+        <activity android:name=".yinying.YinYingActivity"></activity>
+        <activity android:name=".tongzhilan.TongZhiLanActivity"></activity>
+        <activity android:name=".colorfulline.ColorFullIneActivity"></activity>
+        <activity android:name=".wxpwd.WxPwdActivity"></activity>
+        <activity android:name=".shijuexiaoguo.ShiJueTeXiaoActivity"></activity>
+        <activity android:name=".daojishi.DaoJiShiActivity"></activity>
+        <activity android:name=".daojishi.ShowActivity" />
+        <activity android:name=".daojishi.SettingActivity" />
+        <activity android:name=".daojishi.CompletedActivity" />
+        <activity android:name=".zuolatiaozhuan.HomeActivity" />
+        <activity android:name=".zuolatiaozhuan.ShowMoreActivity" />
+        <activity android:name=".allviewtouming.AllViewToumingActivity"></activity>
+        <activity android:name=".dingbuxuanfu.DingBuXuanFuActivity"></activity>
+        <activity android:name=".zhihu.ZhiHuActivity"></activity>
+        <activity android:name=".shichagundong.ShiChaGunDongActivity"></activity>
+        <activity android:name=".shichagundong.VerticalSampleActivity" />
+        <activity android:name=".shichagundong.HorizontalSampleActivity" />
+        <activity android:name=".shichagundong.ParallaxEverywhereSample" />
+        <activity android:name=".shichagundong.AboutActivity" />
+        <activity android:name=".designtest.test2.DesignTest3Activity"></activity>
     </application>
 
 </manifest>

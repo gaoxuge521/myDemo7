@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.gxg.administrator.mydemo7.R;
 import com.gxg.administrator.mydemo7.designtest.test2.DesignTest2Activity;
+import com.gxg.administrator.mydemo7.designtest.test2.DesignTest3Activity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -30,7 +31,7 @@ public class DesignTestActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.test1, R.id.test2})
+    @OnClick({R.id.test3,R.id.test1, R.id.test2})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.test1:
@@ -38,6 +39,9 @@ public class DesignTestActivity extends AppCompatActivity {
                 break;
             case R.id.test2:
                 startActivity(new Intent(DesignTestActivity.this,DesignTest2Activity.class));
+                break;
+            case R.id.test3:
+                startActivity(new Intent(DesignTestActivity.this,DesignTest3Activity.class));
                 break;
         }
     }

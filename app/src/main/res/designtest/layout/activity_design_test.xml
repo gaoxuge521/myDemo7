@@ -33,6 +33,16 @@
                 android:gravity="center"
                 android:text="test2"
                 android:textSize="20sp"/>
+            <TextView
+                android:layout_marginTop="1dp"
+                android:id="@+id/test3"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@android:color/black"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:text="test3"
+                android:textSize="20sp"/>
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

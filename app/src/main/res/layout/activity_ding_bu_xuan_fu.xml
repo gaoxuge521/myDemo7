@@ -32,6 +32,7 @@
 
             <!--滑动到顶部折叠-->
             <!--app:layout_scrollFlags="scroll|exitUntilCollapsed"-->
+            <!--  app:contentScrim="#193807"设置顶部折叠后的颜色-->
             <android.support.design.widget.CollapsingToolbarLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -58,6 +59,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
                     app:layout_collapseMode="pin"
+                    android:title=""
                     app:layout_scrollFlags="scroll|enterAlways"
                     >
 
@@ -68,7 +70,7 @@
                         android:textColor="@color/white"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="这是标题啊啊啊啊"/>
+                        android:text="这是标题"/>
                 </android.support.v7.widget.Toolbar>
 
 
