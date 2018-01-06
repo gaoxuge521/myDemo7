@@ -7,9 +7,12 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.gxg.administrator.mydemo7.RefreshHeaderLayout.RefreshHeaderLayoutActivity;
+import com.gxg.administrator.mydemo7.StickHeader.StickHeaderActivity;
 import com.gxg.administrator.mydemo7.alivlayout.AliVLayoutActivity;
 import com.gxg.administrator.mydemo7.allviewtouming.AllViewToumingActivity;
 import com.gxg.administrator.mydemo7.colorfulline.ColorFullIneActivity;
+import com.gxg.administrator.mydemo7.constrainlayout.ConstrainLayoutActivity;
+import com.gxg.administrator.mydemo7.coordinatortablayout.CoordinatortablayoutActivity;
 import com.gxg.administrator.mydemo7.daojishi.DaoJiShiActivity;
 import com.gxg.administrator.mydemo7.designtest.DesignTestActivity;
 import com.gxg.administrator.mydemo7.dingbuxuanfu.DingBuXuanFuActivity;
@@ -22,7 +25,9 @@ import com.gxg.administrator.mydemo7.pubuliuhead.MyPubuliuActivity;
 import com.gxg.administrator.mydemo7.scrolldemo.ScrollDemoActivity;
 import com.gxg.administrator.mydemo7.shichagundong.ShiChaGunDongActivity;
 import com.gxg.administrator.mydemo7.shijuexiaoguo.ShiJueTeXiaoActivity;
+import com.gxg.administrator.mydemo7.shimmer.ShimmerActivity;
 import com.gxg.administrator.mydemo7.tongzhilan.TongZhiLanActivity;
+import com.gxg.administrator.mydemo7.videos.VideoActivity;
 import com.gxg.administrator.mydemo7.webview.WebViewActivity;
 import com.gxg.administrator.mydemo7.wxpwd.WxPwdActivity;
 import com.gxg.administrator.mydemo7.yinying.YinYingActivity;
@@ -53,9 +58,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.shichagundong,R.id.zhihu,R.id.dingbu_xuanfu,R.id.all_view_touming,R.id.view_left_more,R.id.view_daojishi,R.id.view_shijuetexiao,R.id.view_wxpay,R.id.view_colorline,R.id.view_tongzhilan,R.id.view_addyinying,R.id.refresh_item,R.id.tv_headscroll,R.id.tv_design,R.id.tv_web,R.id.tv_okhttp, R.id.tv_scroll, R.id.iv_zxing, R.id.rv_pbl, R.id.rv_head, R.id.rv_ali, R.id.rv_fre_head, R.id.iv_picture})
+    @OnClick({R.id.rv_stickheader,R.id.rv_coordinatortablayout,R.id.rv_default,R.id.shipin,R.id.yueshubuju,R.id.shichagundong,R.id.zhihu,R.id.dingbu_xuanfu,R.id.all_view_touming,R.id.view_left_more,R.id.view_daojishi,R.id.view_shijuetexiao,R.id.view_wxpay,R.id.view_colorline,R.id.view_tongzhilan,R.id.view_addyinying,R.id.refresh_item,R.id.tv_headscroll,R.id.tv_design,R.id.tv_web,R.id.tv_okhttp, R.id.tv_scroll, R.id.iv_zxing, R.id.rv_pbl, R.id.rv_head, R.id.rv_ali, R.id.rv_fre_head, R.id.iv_picture})
     public void onViewClicked(View view) {
         switch (view.getId()) {
+            case R.id.yueshubuju:
+                startActivity(new Intent(MainActivity.this, ConstrainLayoutActivity.class));
+                break;
             case R.id.rv_pbl:
                 startActivity(new Intent(MainActivity.this, RecycleViewDemo.class));
                 break;
@@ -124,6 +132,18 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.shichagundong:
                 startActivity(new Intent(MainActivity.this, ShiChaGunDongActivity.class));
+                break;
+            case R.id.shipin:
+                startActivity(new Intent(MainActivity.this, VideoActivity.class));
+                break;
+            case R.id.rv_default:
+                startActivity(new Intent(MainActivity.this, ShimmerActivity.class));
+                break;
+            case R.id.rv_coordinatortablayout:
+                startActivity(new Intent(MainActivity.this, CoordinatortablayoutActivity.class));
+                break;
+            case R.id.rv_stickheader:
+                startActivity(new Intent(MainActivity.this, StickHeaderActivity.class));
                 break;
 
         }

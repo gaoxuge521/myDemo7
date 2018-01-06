@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gxg.administrator.mydemo7.coordinatortablayout.CoordinatorTabLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/coordinatortablayout"
+    android:layout_height="match_parent"
+    tools:context="com.gxg.administrator.mydemo7.coordinatortablayout.CoordinatortablayoutActivity">
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</com.gxg.administrator.mydemo7.coordinatortablayout.CoordinatorTabLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/card_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="4"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:textColor="#212121"
+                android:textSize="16sp"
+                tools:text="Who Will Ride The Third Dragon In \'Game Of Thrones\' Season 7?" />
+
+            <TextView
+                android:id="@+id/card_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="4"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:textColor="#8b8b8b"
+                android:textSize="14sp"
+                tools:text="Game of Thrones season 7 will kick off a new age of Game of Thrones, with the show becoming a true epic fantasy for the first time. Don’t worry, it will remain a high political drama too, but the war between ice and fire isn’t far off now, and Daenerys Targaryen seems destined to lead the fight" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/card_image"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginRight="16dp"
+            android:src="#16000000" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/card_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:maxLines="4"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="#212121"
+        android:textSize="14sp"
+        tools:text="You\'ve shown interest in Game of Thrones series" />
+
+</LinearLayout>
+

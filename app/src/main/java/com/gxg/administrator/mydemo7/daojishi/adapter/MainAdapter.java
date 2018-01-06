@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class MainAdapter extends BaseQuickAdapter<Class,BaseViewHolder> {
     public MainAdapter(@Nullable List<Class> data) {
-        super(R.layout.item_main,data);
+        super(R.layout.item_main_coordinalayout,data);
     }
 
     @Override

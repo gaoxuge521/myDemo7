@@ -186,6 +186,43 @@
                 android:gravity="center"
                 android:text="视差滚动。"
                 android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/yueshubuju"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="约束布局。"
+                android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/shipin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="视频列表"
+                android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/rv_default"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="rv的默认页面"
+                android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/rv_coordinatortablayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="coordinatortablayout"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/rv_stickheader"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="StickHeader"
+                android:textSize="14sp"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

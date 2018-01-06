@@ -33,7 +33,10 @@ android {
             res.srcDir "src/main/res/dingbuxuanfu"
             res.srcDir "src/main/res/zhihu"
             res.srcDir "src/main/res/shichagundong"
-
+            res.srcDir "src/main/res/video"
+            res.srcDir "src/main/res/shimmer"
+            res.srcDir "src/main/res/coordinatortablayout"
+            res.srcDir "src/main/res/stickheader"
         }
     }
     buildTypes {
@@ -77,7 +80,9 @@ dependencies {
     compile 'com.squareup.okhttp3:okhttp:3.6.0'
     compile 'com.squareup.okio:okio:1.11.0'
     compile 'com.bigkoo:convenientbanner:2.0.5'
+    compile 'io.supercharge:shimmerlayout:1.1.0'
     compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.5'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+    compile 'net.cachapa.expandablelayout:expandablelayout:2.9.2'
 }

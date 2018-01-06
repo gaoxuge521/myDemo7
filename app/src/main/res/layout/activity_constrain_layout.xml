@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gxg.administrator.mydemo7.constrainlayout.ConstrainLayoutActivity">
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#765"
+        android:gravity="center"
+        android:text="banner"
+        app:layout_constraintDimensionRatio="H,2:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="140dp"
+        android:layout_height="86dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/yidian_1167278026"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="等闲变却故人心，却道故人心易变;天若有情天亦老，人间正道是沧桑"
+        app:layout_constraintLeft_toRightOf="@+id/iv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:text="老残游记哈哈哈哈哈哈哈哈"
+        app:layout_constraintBottom_toBottomOf="@+id/iv"
+
+        app:layout_constraintLeft_toRightOf="@+id/iv" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:text="测试属性"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_name"
+        app:layout_constraintLeft_toRightOf="@+id/tv_name" />
+
+    <ImageView
+        android:id="@+id/iv_shop"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/shop"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_price"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/black"
+        android:text="button"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/iv" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp"
+        android:background="@color/black"
+        android:text="button"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/btn1"
+        app:layout_constraintLeft_toRightOf="@+id/btn1"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/black"
+        android:text="button3"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/btn2" />
+
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/black"
+        android:text="button4"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toRightOf="@+id/btn3"
+        app:layout_constraintTop_toBottomOf="@+id/btn2" />
+
+    <Button
+        android:id="@+id/btn5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/black"
+        android:text="button5"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toRightOf="@+id/btn4"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn2" />
+
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/btn3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:text="btn6"
+            android:textColor="@color/white" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:text="btn6"
+            android:textColor="@color/white" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:text="btn6"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
