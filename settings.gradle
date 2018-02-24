@@ -11,3 +11,4 @@ include ':libraryzxing'
 include ':yinyinglibrary'
 include ':scrollparallaximageview'
 include ':parallaxlibrary'
+include ':prdownloader'  //https://github.com/MindorksOpenSource/PRDownloader

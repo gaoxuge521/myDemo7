@@ -60,7 +60,9 @@
         <activity android:name=".shimmer.ShimmerActivity" />
         <activity android:name=".shimmer.DemoActivity" />
         <activity android:name=".coordinatortablayout.CoordinatortablayoutActivity" />
-        <activity android:name=".StickHeader.StickHeaderActivity"></activity>
+        <activity android:name=".StickHeader.StickHeaderActivity" />
+        <activity android:name=".goodsSelect.GoodsSelectActivity" />
+        <activity android:name=".prdownloader.utils.PRDownloaderActivity"></activity>
     </application>
 
 </manifest>

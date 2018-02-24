@@ -20,6 +20,7 @@ import com.gxg.administrator.mydemo7.headscroll.HeadScrollActivity;
 import com.gxg.administrator.mydemo7.iswiperefreshlayout.IRecycleviewActivity;
 import com.gxg.administrator.mydemo7.okhttp.OkHttpActivity;
 import com.gxg.administrator.mydemo7.pictures.PicturesActivity;
+import com.gxg.administrator.mydemo7.prdownloader.utils.PRDownloaderActivity;
 import com.gxg.administrator.mydemo7.pubuliu.RecycleViewDemo;
 import com.gxg.administrator.mydemo7.pubuliuhead.MyPubuliuActivity;
 import com.gxg.administrator.mydemo7.scrolldemo.ScrollDemoActivity;
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.rv_stickheader,R.id.rv_coordinatortablayout,R.id.rv_default,R.id.shipin,R.id.yueshubuju,R.id.shichagundong,R.id.zhihu,R.id.dingbu_xuanfu,R.id.all_view_touming,R.id.view_left_more,R.id.view_daojishi,R.id.view_shijuetexiao,R.id.view_wxpay,R.id.view_colorline,R.id.view_tongzhilan,R.id.view_addyinying,R.id.refresh_item,R.id.tv_headscroll,R.id.tv_design,R.id.tv_web,R.id.tv_okhttp, R.id.tv_scroll, R.id.iv_zxing, R.id.rv_pbl, R.id.rv_head, R.id.rv_ali, R.id.rv_fre_head, R.id.iv_picture})
+    @OnClick({R.id.rv_xiazaiduandianxuchuan,R.id.rv_stickheader,R.id.rv_coordinatortablayout,R.id.rv_default,R.id.shipin,R.id.yueshubuju,R.id.shichagundong,R.id.zhihu,R.id.dingbu_xuanfu,R.id.all_view_touming,R.id.view_left_more,R.id.view_daojishi,R.id.view_shijuetexiao,R.id.view_wxpay,R.id.view_colorline,R.id.view_tongzhilan,R.id.view_addyinying,R.id.refresh_item,R.id.tv_headscroll,R.id.tv_design,R.id.tv_web,R.id.tv_okhttp, R.id.tv_scroll, R.id.iv_zxing, R.id.rv_pbl, R.id.rv_head, R.id.rv_ali, R.id.rv_fre_head, R.id.iv_picture})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.yueshubuju:
@@ -144,6 +145,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.rv_stickheader:
                 startActivity(new Intent(MainActivity.this, StickHeaderActivity.class));
+                break;
+            case R.id.rv_xiazaiduandianxuchuan:
+                startActivity(new Intent(MainActivity.this, PRDownloaderActivity.class));
                 break;
 
         }
