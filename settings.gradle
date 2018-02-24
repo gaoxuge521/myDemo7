@@ -12,3 +12,4 @@ include ':yinyinglibrary'
 include ':scrollparallaximageview'
 include ':parallaxlibrary'
 include ':prdownloader'  //https://github.com/MindorksOpenSource/PRDownloader
+include ':animatedpieviewlib'  //https://github.com/razerdp/AnimatedPieView

@@ -231,6 +231,13 @@
                 android:gravity="center"
                 android:text="下载断点续传"
                 android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/rv_animatedpieview"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="animatedpieview"
+                android:textSize="14sp"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

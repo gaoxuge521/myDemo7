@@ -38,6 +38,7 @@ android {
             res.srcDir "src/main/res/coordinatortablayout"
             res.srcDir "src/main/res/stickheader"
             res.srcDir "src/main/res/prdownloader"
+            res.srcDir "src/main/res/animatedpieview"
         }
     }
     buildTypes {
@@ -65,14 +66,18 @@ dependencies {
     compile project(':takephoto_library')
     compile project(':libraryzxing')
     //轮播图
+
     //gif图
+
     //给任意view添加阴影
+
     //    compile 'com.github.wangjiegulu:ShadowViewHelper:1.0.2'
     compile project(':yinyinglibrary')
     compile project(':parallaxlibrary')
     compile project(':scrollparallaximageview')
     compile project(':prdownloader')
-    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile project(':animatedpieviewlib')
+    compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.25'
     compile 'com.android.support:recyclerview-v7:25.1.0'
@@ -87,4 +92,7 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'net.cachapa.expandablelayout:expandablelayout:2.9.2'
     testCompile 'junit:junit:4.12'
+
+    //basepopup
+    compile 'com.github.razerdp:BasePopup_Candy:1.9.2-beta3'
 }
