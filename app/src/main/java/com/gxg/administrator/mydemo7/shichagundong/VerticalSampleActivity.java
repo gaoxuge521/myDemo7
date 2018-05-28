@@ -38,7 +38,7 @@ public class VerticalSampleActivity extends AppCompatActivity {
             switch (position % 5) {
                 case 0 : holder.iv.setImageResource(R.drawable.pic1); break;
                 case 1 : holder.iv.setImageResource(R.drawable.pic2); break;
-                case 2 : holder.iv.setImageResource(R.drawable.pic3); break;
+                case 2 : holder.iv.setImageResource(R.drawable.pic5); break;
                 case 3 : holder.iv.setImageResource(R.drawable.pic4); break;
                 case 4 : holder.iv.setImageResource(R.drawable.pic5); break;
             }

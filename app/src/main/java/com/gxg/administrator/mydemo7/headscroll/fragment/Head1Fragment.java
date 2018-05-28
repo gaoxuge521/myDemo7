@@ -17,6 +17,7 @@ import com.gxg.administrator.mydemo7.R;
 import com.gxg.administrator.mydemo7.headscroll.adapter.FragmentScrollAdapter;
 import com.gxg.administrator.mydemo7.headscroll.bean.HeadBean;
 import com.gxg.administrator.mydemo7.headscroll.view.HeaderViewPagerFragment;
+import com.socks.library.KLog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,6 +39,15 @@ public class Head1Fragment extends HeaderViewPagerFragment{
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mView = inflater.inflate(R.layout.fragment_head,null);
         return mView;
+
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if(isVisibleToUser){
+            KLog.e("sss", "setUserVisibleHint: "+getActivity()+getArguments().getString("name"));
+        }
 
     }
 
