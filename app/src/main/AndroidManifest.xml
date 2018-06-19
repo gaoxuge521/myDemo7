@@ -40,6 +40,7 @@
         <activity android:name=".colorfulline.ColorFullIneActivity" />
         <activity android:name=".wxpwd.WxPwdActivity" />
         <activity android:name=".shijuexiaoguo.ShiJueTeXiaoActivity" />
+        <activity android:name=".chinaMap.ChinaMapActivity"/>
         <activity android:name=".daojishi.DaoJiShiActivity" />
         <activity android:name=".daojishi.ShowActivity" />
         <activity android:name=".daojishi.SettingActivity" />
